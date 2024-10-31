@@ -1,50 +1,38 @@
-# React + TypeScript + Vite
+# dt-money
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Introdução
 
-Currently, two official plugins are available:
+O **dt-money** é uma aplicação web voltada para controle financeiro, permitindo o gerenciamento prático de entradas e saídas financeiras. Ela oferece uma interface para visualizar e categorizar transações, calcular o saldo total e aplicar filtros ou buscas, garantindo uma análise completa das finanças. A aplicação conta com um modal intuitivo para criar novas transações, onde é possível definir o tipo como entrada ou saída. Com um back-end gerenciado pelo JSON Server, o **dt-money** facilita a experiência do usuário ao armazenar dados de forma ágil e eficiente.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tecnologias
 
-## Expanding the ESLint configuration
+### Front-end
+- **React**: Utilizado para criação de uma interface dinâmica e interativa.
+- **React-DOM**: Para renderização dos componentes React.
+- **React-Router-DOM**: Gerenciamento de rotas, facilitando a navegação na aplicação.
+- **Styled-Components**: Estilização dos componentes com CSS-in-JS.
+- **Phosphor-React**: Biblioteca de ícones para melhorar a experiência visual.
+- **@radix-ui/react-dialog** e **@radix-ui/react-radio-group**: Componentes de acessibilidade para a criação de modais e seleção de tipo de transação.
+- **React-Hook-Form**: Manipulação e validação de formulários, permitindo uma entrada de dados eficiente e simplificada.
+- **Use-Context-Selector**: Facilita a extração de valores específicos de contexto, garantindo otimização de performance.
+- **Axios**: Utilizado para realizar chamadas HTTP e consumir a API gerada pelo JSON Server.
+- **Zod**: Biblioteca de validação de dados, utilizada para garantir a segurança das entradas.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Back-end
+- **JSON Server**: Simula uma API REST para gerenciar e armazenar dados das transações.
 
-- Configure the top-level `parserOptions` property like this:
+### Desenvolvimento
+- **Vite**: Ferramenta para build e desenvolvimento rápido.
+- **ESLint**: Análise estática para identificar e corrigir problemas no código.
+- **TypeScript**: Proporciona tipagem estática para maior segurança e clareza no desenvolvimento.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Capturas de Tela
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+A seguir, são apresentadas capturas de tela da aplicação **dt-money**. As imagens demonstram a interface do usuário em diferentes cenários de uso, ilustrando as funcionalidades de criação, visualização, atualização e exclusão de transações, além de destacar o design acessível e as opções para categorizar entradas e saídas financeiras.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+![image](https://github.com/user-attachments/assets/10e1b24d-5f47-4e9e-8de4-739644973eac)
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+![image](https://github.com/user-attachments/assets/db52a522-f2e8-4ab0-90a2-a96636b63890)
+
+
+
